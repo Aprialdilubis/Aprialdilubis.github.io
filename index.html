@@ -1,248 +1,159 @@
-<html>
-<head>
-    <title>Tugas Biodata</title>
-<style>
-    .body{
-        background-color: aqua;
-    }
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    .hero{
-        background:  url('https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80');
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-    }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    .box{
-        width: 100%;
-        max-width: 90%;
-        margin: auto;
-        display: flex;
-    }
+    <!-- CSS Index -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
-    .logo{
-        color: aqua;
-        font-family: times new roman;
-        font-weight: bold;
-        width: 1000px;
-        padding: 0px 0px 70px;
-    }
+    <!-- My font -->
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Skranji&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bentham&display=swap" rel="stylesheet">
+    <title>Profile</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">BIODATA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="#AboutMe">About Me <span 
+            class="sr-only"></span></a>
+            <a class="nav-item nav-link" href="#Pendidikan">Pendidikan</a>
+            <a class="nav-item nav-link" href="#Keahlihan">Keahlihan</a>
+            <a class="nav-item nav-link" href="#Kontak">kontak</a>
+            <a class="nav-item btn btn-primary tombol" href="Portofolio.html">Portofolio</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-    .menu{
-        display: flex;
-        width: 700px;
-    }
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid d-flex">
+      <div class="container-fluid">
+        <h1 class="display-4">Halo Selamat Datang<br> I' am M.Aprialdi Lubis <br> Semoga Kita<span> Sehat</span> & <span>Semangat</span> Selalu</h1>
+      </div>
+    </div>
 
-    .menu a{
-        width: 80px;
-        padding: 30px 10px ;
-        text-decoration: none;
-        color: rgba(168, 81, 81, 0.658);
-        font-size: 18px;
-        font-weight: bold;
-        font-family: 'Times New Roman', Times, serif;
-        text-align: center;
-        transition: 0.5s ;
-
-    }
-
-    .menu a:hover{
-        background: rgba(250, 249, 249, 0.438);
-    }
-
-    .content{
-        width: 1000px;
-        height: 800px;
-        font-weight: bold;
-        font-size: 1.2em;
-        padding: 50px 130px;
-        margin: 2px 0px 0px;
-        color: aqua;
-    }
-
-    /* Main */
-    .inner{
-        padding: 100px 50px 100px;
-        background: rgb(187, 233, 233);
-        width: 100%;
-        margin: -40px 0 0;
-    }
-    
-    .main-title h3{
-        font-weight: 1000;
-        text-align: center;
-        font-size: 2em;
-        padding: auto;
-    }
-    
-    .main-content{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    .main-content .desc{
-        width: 55%;
-        font-size: 1.8em;
-    }
-
-    .main-content .image img{
-        width: 110%;
-        border-radius: 10px;
-        box-shadow: 15px 15px 15px white;
-    }
-
-    .box-pendidikan{
-        text-align: center;
-        color: black;
-        margin-top: 90px;
-        align-content: center;
-    }
-
-    .box-kiri, .box-tengah, .box-kanan{
-        width: 200px;
-        height: 220px;
-        background-color: #f0f0f0;
-        text-align: center;
-        align-content: center;
-        padding: 60px 80px;   
-        margin: 10px 20px 10px 35px;
-        border-radius: 10px;
-        float: left;
-    }
-
-    .box-kiri:hover, .box-tengah:hover, .box-kanan:hover{
-        background-color: lightseagreen;
-    }
-
-    .box-keahlihan{
-        text-align: center;
-        color: black;
-        margin-top: 560px;
-        align-content: center;
-    }
-
-    .box-kiri, .box-tengah, .box-kanan{
-        width: 200px;
-        height: 220px;
-        background-color: #f0f0f0;
-        text-align: center;
-        align-content: center;
-        padding: 60px 80px;   
-        margin: 10px 20px 10px 35px;
-        border-radius: 10px;
-        float: left;
-    }
-
-    .box-kiri:hover, .box-tengah:hover, .box-kanan:hover{
-        background-color: lightseagreen;
-    }
-
-    .kontak{
-        text-align: center;
-        color: black;
-        margin-top: 560px;
-        align-content: center
-    }
-
-    h2{
-        font-family: corier new;
-    }
-</style>
-</head>
-
-<body>
     <!-- Hero -->
-    <div class="hero">
-        <header>
-            <div class="box">
-                <div class="logo">
-                    <H1>Biodata</H1>
-                </div>
-                <div class="menu">
-                   <a href="#AboutMe">AboutMe</a>
-                   <a href="#keahlihan">Keahlian</a>
-                   <a href="#Pendidikan">Pendidikan</a>
-                   <a href="Portofolio.html">Portofolio</a>
-                   <a href="#Kontak">Kontak</a>
-                </div>
-        </header>
-        <div class="content">
-            <h1>Selamat Datang & <br> Terimakasih telah mengunjungi halaman ini <br> Halo.. <br> I'am M. Aprialdi Lubis</h1>
+    <div class="hero" class="container-fluid d-flex flex-column align-items-center justify-content-center"></div>
+ 
+
+    <!-- About Me -->
+    <div id="AboutMe" class="container3 container-fluid">
+      <div class="row justify-content-center">
+        <h2 class="text-center1 mt-3">About Me</h2>
+      </div>
+      <div class="row container-fluid">
+        <div class="col-4">
+          <img class="gambar float-right rounded" src="img/aldi.jpeg" width="250">
         </div>
+        <div class="col-6">
+          <p class="paragraf-about">Halo nama saya M. Aprialdi lubis saya lahir di kota Pangkalan Berandan, Sumatera Utara pada tanggal 15 April 2001.
+            Saya berasal dari Universitas Muhammadiyah Sumatera Utara jurusan Manajemen dan saat ini berada di semester 5.  
+            Hobi Saya bermain badminton serta makanan favoritku ayam goreng, nasi goreng dan bakso. Saya sedang mengikuti Studi Independen Bersertifikat SEAL, dari program tersebut yang saya tertarik banget mendalaminya yaitu Web Development walaupun saya berasal tidak dari background jurusan kuliah non IT namun dengan itu tidak buat saya jadi halangan untuk belajar ataupun mecoba sesuatu hal yang baru.</p>
+        </div>
+      </div>
     </div>
 
-    <!-- End Hero -->
-    <!-- Main -->
-    <div class="main">
-        <div class="box" id="AboutMe">
-            <div class="inner">
-                <div class="main-title">
-                    <h3>About Me</h3>
-                </div>          
-                <div class="main-content">
-                    <div class="desc">
-                        <p>Halo nama saya M. Aprialdi lubis saya lahir di kota Pangkalan Berandan, Sumatera Utara pada tanggal 15 April 2001.
-                        Saya berasal dari Universitas Muhammadiyah Sumatera Utara jurusan Manajemen dan saat ini berada di semester 5.  
-                        Hobi Saya bermain badminton serta makanan favoritku ayam goreng, nasi goreng dan bakso.</p>
-                    </div>
-                    <div class="image">
-                        <img src="aldi.jpeg" alt="aldi" width="300" height="400">
-                    </div>
-                
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Pendidikan Saya -->
-    <div class="box-pendidikan" id="Pendidikan">
-        <h1>Pendidikan Saya</h1>
-        <div class="box-kiri">
-            <img src="logosmp.jpeg" width="100" height="100">   
-            <p><h2>Sekolah Menengah Pertama</h2></p>
-            <p>Saya bersekolah di SMP Negeri 1 Babalan, Pangkalan Berandan <br> Pada tahun 2013-2016</p>      
-        </div>
+    <div class="container-fluid box-pendidikan align-item-center" id="Pendidikan">
+      <div class="row justify-content-center"></div>
+      <h1 class="pendidikan">Pendidikan</h1>
+      <div class="box-kiri">
+        <img src="img/logosmp.jpeg" width="100" height="100">   
+        <h2 class="smp">Sekolah Menengah Pertama</h2>
+        <p>Saya bersekolah di SMP Negeri 1 Babalan, Pangkalan Berandan <br> Pada tahun 2013-2016</p>      
+      </div>
 
-        <div class="box-tengah">
-            <img src="logosma.jpeg" width="100" height="100">
-            <p><h2>Sekolah Menengah Atas</h2></p>
-            <p>Saya bersekolah di SMA Negeri 1 Babalan, Pangkalan Berandan <br>Pada tahun 2016-2019</p>         
-        </div>
+      <div class="box-tengah container-fluid">
+        <img src="img/logosma.jpeg" width="100" height="100">
+        <h2 class="sma">Sekolah Menengah Atas</h2>
+        <p>Saya bersekolah di SMA Negeri 1 Babalan, Pangkalan Berandan <br>Pada tahun 2016-2019</p>         
+      </div>
 
-        <div class="box-kanan">
-            <img src="logokuliah.jpeg" width="100" height="100">  
-            <p><h2>Perguruan Tinggi</h2></p>
-            <p> <br>Saya berkuliah di Universitas Muhammadiyah Sumatera Utara <br> Pada tahun 2020-Sekarang</p>       
-        </div>
+      <div class="box-kanan container-fluid">
+        <img src="img/UMSU.png" width="112" height="113">  
+        <h2 class="kuliah">Perguruan Tinggi</h2>
+        <p> <br>Saya berkuliah di Universitas Muhammadiyah Sumatera Utara <br> Pada tahun 2020-Sekarang</p>       
+      </div>
     </div>  
 
-    <!-- Keahlihan Saya -->
-    <div class="box-Keahlihan" id="keahlihan">
-        <h1>Keahlian Saya</h1>
-        <div class="box-kiri">
-            <img src="logodigitalmarketing.jpeg" width="100" height="100">   
-            <p><h2>Digital Marketing</h2></p>
-            <p>Saya memiliki keahlihan dalan digital marketing seperti SEM, email marketing, dan membuat iklan digital</p>      
+    <section id="Keahlihan">
+      <div class="container">
+        <div class="row justify-content-center container-fluid mt-4">
+          <h1 class="skill">Keahlihan</h1>
         </div>
+      </div>  
+      <div class="container-fluid text-center">
+        <img src="img/office.png" width="30%">
+        <img src="img/dm.png" width="20%">
+        <img src="img/Canva.png" width="20%">
+        <img src="img/finan.png" width="20%">
+      </div>
+    </section> 
     
-        <div class="box-tengah">
-            <img src="logomicrosoftoffice.jpeg" width="100" height="100">
-            <p><h2>Microsoft Office</h2></p>
-            <p>Saya memiliki keahlihan dalam membuat laporan menggunakan microsoft office</p>         
-        </div>
-    
-        <div class="box-kanan">
-            <img src="logodesign.jpeg" width="100" height="100">  
-            <p><h2>Design</h2></p>
-            <p>Saya memiliki keahlihan design di beberapa software design yang ada</p>       
-        </div>
-    </div>    
 
-    <div class="kontak" id="Kontak">
-        <h2>Kontak Saya</h2>
-        <p><a href="https://www.instagram.com/aprialdi.lubis/">instagram | <a href="https://t.me/aldilubis1">Telegram</p>
+    
+    <div class="container2 container-fluid" id="Kontak">
+      <h2 class="heading">Contact</h2>
+      <h2 style="text-align: center;">Halo folk's, Let's Talk</h2>
+      <p style="text-align: center;">Feel free to say hello!</p>
+    
+    
+    <div class="row md-6">
+    <div class=" col-md-6">
+    <input type="Text"name="text" required=""placeholder="your name" class="form-control">
+    <br>
+    <input type="Text"name="text" required=""placeholder="yourgmail.@com" class="form-control">
+    <br>
+    <textarea rows="6" placeholder="Message" class="form-control"></textarea>
+    <br>
+    <button class="btn btn-info text-x">Submit</button>
+    <br><br>
+      
     </div>
-</body>
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-5">
+    <p class="icn"><i class="fa fa-map-marker"> </i>&nbsp;&nbsp;Medan, North Sumatera, Indonesia</p>
+    <p class="icn"><i class="fa fa-phone"> </i>&nbsp;&nbsp;+62 8xxxxxxxx</p>
+    <p class="icn"><i class="fa fa-envelope">  </i>&nbsp;&nbsp;akunbelajr1@gmail.com</p>
+    <a href="https://www.instagram.com/aprialdi.lubis/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+    </svg></a>
+    <a href="https://t.me/aldilubis1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+    </svg></a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+      <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+    </svg> 2022</span>
+
+    
+    </div>
+    </div>
+
+
+    
+    
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+  
+  </body>
 </html>
