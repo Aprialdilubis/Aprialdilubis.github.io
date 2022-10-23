@@ -81,7 +81,7 @@ body {
   text-align: center;
   align-content: center;
   padding: 5px;   
-  margin: 50px 0px 0px 22px;
+  margin: 20px 0px 20px 0px;
   border-radius: 10px;
   float: left;
 }
@@ -150,6 +150,19 @@ body {
     color: rgb(255, 255, 255) !important;
     text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.7);
   }
+
+  .box-kiri, .box-tengah, .box-kanan{
+    width: 300px;
+    height: auto;
+    background-color: #d6cfcf;
+    text-align: center;
+    align-content: center;
+    padding: 5px;   
+    margin: 50px 0px 0px 82px;
+    border-radius: 10px;
+    float: left;
+  }
+
   .nav-link {
     text-transform: uppercase;
     margin-right: 30px;
