@@ -84,6 +84,7 @@ body {
   margin: 20px 0px 0px 23.2px;
   border-radius: 10px;
   float: left;
+
 }
 
 .box-kiri:hover, .box-tengah:hover, .box-kanan:hover{
@@ -158,7 +159,7 @@ body {
     text-align: center;
     align-content: center;
     padding: 5px;   
-    margin: 50px 0px 0px 82px;
+    margin: 50px 0px 0px 89px;
     border-radius: 10px;
     float: left;
   }
