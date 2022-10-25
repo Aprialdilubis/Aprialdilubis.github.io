@@ -81,7 +81,7 @@ body {
   text-align: center;
   align-content: center;
   padding: 5px;   
-  margin: 20px 0px 0px 23.2px;
+  margin: 20px 0px 0px 80px;
   border-radius: 10px;
   float: left;
 
@@ -94,7 +94,7 @@ body {
 /* End box pendidikan */
 
 /* Handphone */
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .paragraf-about {
     text-align: justify;
     font-size: 0.44em;
@@ -109,6 +109,18 @@ body {
     width: 112px;
     object-fit: cover;
     margin: 0px;
+  }
+  .box-kiri, .box-tengah, .box-kanan{
+    width: 300px;
+    height: auto;
+    background-color: #d6cfcf;
+    text-align: center;
+    align-content: center;
+    padding: 5px;   
+    margin: 20px 0px 0px 23.2px;
+    border-radius: 10px;
+    float: left;
+  
   }
 }
 
